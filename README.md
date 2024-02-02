@@ -36,7 +36,7 @@ npm install
 ```env
 TOKEN = "your_token"
 NAME = "Music Disc"
-PREFIX = "+"
+PREFIX = "."
 PLAYING = "Music | /help"
 COLOR = "#FFFFFF"
 DEFAULT_VOLUME = 50
