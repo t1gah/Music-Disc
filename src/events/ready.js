@@ -29,15 +29,6 @@ module.exports = async (client) => {
     console.log(`| ${release.djs.padEnd(30, ' ')} |`);
     console.log(`+-----------------------+`);
 
-
-    client.application.commands.set(client.commands.map(cmd => {
-        return {
-            name: cmd.name,
-            description: cmd.description,
-            options: cmd.options
-        }
-    }));
-
     client.user.setActivity(client.config.playing);
     console.log(`>>> Logged in as ${client.user.username}`);
 };

@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'leave',
-    aliases: ['stop'],
+    name: 'stop',
+    aliases: ['s'],
     description: 'Leave current voice channel',
-    usage: 'leave',
+    usage: 'stop',
     voiceChannel: true,
     options: [],
 
@@ -10,23 +10,23 @@ module.exports = {
         const queue = client.player.nodes.get(message.guild.id);
 
         if (!queue || !queue.isPlaying())
-            return message.reply({ content: `❌ | There is no music currently playing.`, allowedMentions: { repliedUser: false } });
+            return message.reply({ content: `There is no music currently playing.`, allowedMentions: { repliedUser: false } });
 
         if (!queue.deleted)
             queue.delete();
 
-        return message.react('👍');
+        
     },
 
     slashExecute(client, interaction) {
         const queue = client.player.nodes.get(interaction.guild.id);
 
         if (!queue || !queue.isPlaying())
-            return interaction.reply({ content: `❌ | There is no music currently playing.`, allowedMentions: { repliedUser: false } });
+            return interaction.reply({ content: `There is no music currently playing.`, allowedMentions: { repliedUser: false } });
 
         if (!queue.deleted)
             queue.delete();
 
-        return interaction.reply('✅ | Bot leave.');
+        return interaction.reply('Bot leave.');
     },
 };

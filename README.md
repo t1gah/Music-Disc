@@ -37,7 +37,7 @@ npm install
 TOKEN = "your_token"
 NAME = "Music Disc"
 PREFIX = "+"
-PLAYING = "+help | music"
+PLAYING = "Music | /help"
 COLOR = "#FFFFFF"
 DEFAULT_VOLUME = 50
 MAX_VOLUME = 100
@@ -69,7 +69,7 @@ services:
     environment:
       TOKEN: "your_token"
       PREFIX: "+"
-      PLAYING: "+help | music"
+      PLAYING: "Music | /help"
       COLOR: "#FFFFFF"
       DEFAULTVOLUME: 50
       MAXVOLUME: 100
